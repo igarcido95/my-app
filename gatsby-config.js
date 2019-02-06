@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: 'Complete courses about the best tools and design systems. Prototype and build apps with React and Swift. 60 hours of video content and reource materials. No conding experience required.',
+    keywords: 'react course',
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -27,6 +28,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: '1swjwvrmxo8b',
+        accessToken: '137eb466a48b82cccc8807a1410ae662451ffb14dea1f67df3fbcad9884cf1cd'
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

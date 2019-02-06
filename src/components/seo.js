@@ -57,7 +57,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                       name: `keywords`,
                       content: keywords.join(`, `),
                     }
-                  : []
+                  : {
+                      name: `keywords`,
+                      content: data.site.siteMetadata.keywords,
+                    }
               )
               .concat(meta)}
           />
@@ -90,6 +93,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        keywords
       }
     }
   }
